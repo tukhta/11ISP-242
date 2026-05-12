@@ -1,3 +1,5 @@
+import { assetUrl } from "../utils/assets";
+
 export function Plate({ plateCount, carryingFly, onSelect }) {
   const canTakeFly = plateCount > 0 && !carryingFly;
 
@@ -13,14 +15,14 @@ export function Plate({ plateCount, carryingFly, onSelect }) {
       }}
       aria-label="Тарелка с мухами"
     >
-      <img className="plate__image" src="/assets/plate.svg" alt="" />
+      <img className="plate__image" src={assetUrl("plate.svg")} alt="" />
       <div className="plate__counter">{plateCount}</div>
       <div className="plate__flies">
         {Array.from({ length: Math.min(plateCount, 5) }).map((_, index) => (
           <img
             key={index}
             className={`plate__fly plate__fly--${index + 1}`}
-            src="/assets/fly.svg"
+            src={assetUrl("fly.svg")}
             alt=""
           />
         ))}

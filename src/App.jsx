@@ -4,6 +4,7 @@ import { FrogStage } from "./components/FrogStage";
 import { Plate } from "./components/Plate";
 import { StatBar } from "./components/StatBar";
 import { useWindowSize } from "./hooks/useWindowSize";
+import { assetUrl } from "./utils/assets";
 
 const FLY_COUNT = 7;
 const HUNGER_START = 68;
@@ -364,7 +365,7 @@ export default function App() {
         setMousePosition({ x: event.clientX, y: event.clientY });
       }}
     >
-      <img className="page__background" src="/assets/background.svg" alt="" />
+      <img className="page__background" src={assetUrl("background.svg")} alt="" />
 
       <section className="hud">
         <div className="hud__title">
@@ -398,7 +399,7 @@ export default function App() {
       {carryingFly ? (
         <img
           className="cursor-fly"
-          src="/assets/fly.svg"
+          src={assetUrl("fly.svg")}
           alt=""
           style={{
             left: `${mousePosition.x + 8}px`,

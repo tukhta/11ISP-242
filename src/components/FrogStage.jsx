@@ -1,3 +1,5 @@
+import { assetUrl } from "../utils/assets";
+
 export function FrogStage({
   moodLabel,
   frogRef,
@@ -15,7 +17,7 @@ export function FrogStage({
       }}
       aria-label="Лягушка"
     >
-      <img className="frog-stage__frog" src="/assets/frog.svg" alt="" />
+      <img className="frog-stage__frog" src={assetUrl("frog.svg")} alt="" />
       <div className="frog-stage__bubble">{moodLabel}</div>
       <div className="frog-stage__shadow" />
     </button>

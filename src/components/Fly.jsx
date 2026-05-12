@@ -1,3 +1,5 @@
+import { assetUrl } from "../utils/assets";
+
 export function Fly({ fly, onCatch }) {
   return (
     <button
@@ -18,7 +20,7 @@ export function Fly({ fly, onCatch }) {
       disabled={fly.caught}
       aria-label="Поймать муху"
     >
-      <img src="/assets/fly.svg" alt="" />
+      <img src={assetUrl("fly.svg")} alt="" />
     </button>
   );
 }
